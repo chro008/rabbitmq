@@ -13,7 +13,7 @@ import com.rabbitmq.client.DeliverCallback;
  */
 public class Worker {
 
-    private static final  String QUEUE_NAME = "q_test_01";
+    private static final  String QUEUE_NAME = "q_test_02";
     private static final String baseMessage = "hello";
 
     public static void main(String[] args)  throws Exception{
@@ -21,9 +21,12 @@ public class Worker {
         factory.setHost("localhost");
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
+
+        //每次rabbitmq 会将队列中的多少个message 分配给消费者
         channel.basicQos(1);
 
-        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        boolean durable = true;  //队列持久化
+        channel.queueDeclare(QUEUE_NAME, durable, false, false, null);
         System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
         DeliverCallback deliverCallback = (s, delivery) -> {

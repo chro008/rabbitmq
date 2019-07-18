@@ -11,7 +11,7 @@ import com.rabbitmq.client.DeliverCallback;
  */
 public class Worker2 {
 
-    private static final  String QUEUE_NAME = "q_test_01";
+    private static final  String QUEUE_NAME = "q_test_02";
     private static final String baseMessage = "hello";
 
     public static void main(String[] args)  throws Exception{
