@@ -31,5 +31,7 @@ public class Recv {
         };
 
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag->{});
+
+
     }
 }

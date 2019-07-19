@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for rabbitmq" enabled="true">
+        <sourceOutputDir name="rabbitmq_demo/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="rabbitmq_demo/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rabbitmq_demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

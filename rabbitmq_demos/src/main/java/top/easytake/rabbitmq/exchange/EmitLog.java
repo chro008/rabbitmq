@@ -24,6 +24,9 @@ public class EmitLog {
         channel.basicPublish(EXCHANGE_NAME, "", null, message.getBytes("UTF-8"));
 
         System.out.println("[X] Sent '" + message+ "'");
+
+        channel.close();
+        connection.close();
     }
 
 }
